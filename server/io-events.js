@@ -2,7 +2,7 @@ const ioEvents = io => {
   let connections = []
   let events = []
   
-  io.on('connection', (socket) => {
+  io.on('connect', (socket) => {
     connections.push(socket)
     io.sockets.emit('connectionCount', connections.length)
     

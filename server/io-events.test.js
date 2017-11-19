@@ -23,7 +23,7 @@ describe(`io-events`, () => {
   const socketDisconnect = cb_socketDisconnect()
 
   it(`should listen for connection`, () => {
-    expect(mockIo.on.mock.calls[0][0]).toEqual('connection')
+    expect(mockIo.on.mock.calls[0][0]).toEqual('connect')
   })
   
   it(`Then emit connectionCount on new connection`, () => {
