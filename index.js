@@ -1,5 +1,5 @@
 
-const port = 8080
+const port = process.env.PORT || 8080
 const handler = require('./server/middlewares/handler')(port)
 const app = require('http').createServer(handler)
 const io = require('socket.io')(app)
