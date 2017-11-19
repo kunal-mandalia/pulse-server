@@ -1,0 +1,20 @@
+{
+  "name": "pulse-server",
+  "version": "1.0.0",
+  "description": "Realtime analytics with socket.io inspired by segment.io debugger",
+  "main": "index.js",
+  "repository": "https://github.com/kunal-mandalia/pulse-server.git",
+  "author": "Kunal Mandalia <kunal.v.mandalia@gmail.com> (http://kunalmandalia.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "2.0.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js"
+  },
+  "devDependencies": {
+    "jest": "21.2.1",
+    "nodemon": "1.12.1"
+  }
+}
