@@ -1,9 +1,8 @@
-const ioFlow = ioLib => app => {
+const ioEvents = io => {
   let connections = []
   let events = []
   
-  const io = ioLib(app)
-  io.on('connection', (socket) => {
+  io.on('connect', (socket) => {
     connections.push(socket)
     io.sockets.emit('connectionCount', connections.length)
     
@@ -19,4 +18,4 @@ const ioFlow = ioLib => app => {
   })
 }
 
-module.exports = ioFlow
+module.exports = ioEvents
