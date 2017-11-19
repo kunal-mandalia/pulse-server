@@ -33,7 +33,6 @@ describe(`io-events`, () => {
 
   it(`should emit event across all sockets upon receiving event`, () => {
     expect(mockSocket.on.mock.calls[0][0]).toEqual('event')
-    console.log(mockIo.sockets.emit.mock.calls[1][1])
     expect(mockIo.sockets.emit.mock.calls[1][0]).toEqual('event')
     const { type, value } = mockIo.sockets.emit.mock.calls[1][1]
     expect({ type, value }).toEqual(eventData)
